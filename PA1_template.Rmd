@@ -83,11 +83,11 @@ mean(ImptotSteps$x)
 median(ImptotSteps$x)
 ```
 
-There seems to be not much change with the inclusion of imputed data. In other words, the imputation seems to work great that it does not deviate the mean and median of the dataset.
+There seems to be not much change with the inclusion of imputed data. In other words, the imputation seems to work great that it does not deviate the mean and median of teh dataset.
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-1.Create a new factor variable in the dataset with two levels "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
+1.Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
 
 ```{r}
 imputedActivity$week = ifelse(weekdays(as.Date(imputedActivity$date))=="Sunday" | weekdays(as.Date(imputedActivity$date))=="Saturday" ,"Weekend","Weekday")
